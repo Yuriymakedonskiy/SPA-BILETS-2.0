@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/boostrap/bootstrap-grid.css">
+
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="/boostrap/bootstrap.css">
+    <link rel="stylesheet" href="/boostrap/font-awesome.min.css">
+    <link rel="stylesheet" href="https://snipp.ru/cdn/selectize.js/0.12.6/dist/css/selectize.default.css">
+
+    <!-- Наши CSS файлы со стилями -->
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/President.css">
+
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+  integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+    <!-- префиксы  -->
+    <link rel="stylesheet prefetch"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker3.standalone.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+    <!--подключаем js-скрипты-->
+    <script src="/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- функции твиджета -->
+    <script src="/js/jquery.twidget.js?v_1207"></script>
+    <title>SPA-билеты</title>
+</head>
+
+<div id="blue">
+	<!-- Навигационное поле -->
+	<nav class="navbar navbar-expand-lg navbar-color" style="list-style-type: none;text-transform: capitalize;">
+		<div class="container" style="color: #fff">
+			<div class="row">
+				<div class="logotype">
+					<a id="logo"
+						class="navbar-brand col-1 col-sm-7 col-md-4 offset-0 offset-sm-1 offse4t-md-1 offset-xl-1 offset-xxl-2"
+						href="#" style="color: #fff;">
+						<img src="/image/LOGO.svg" alt="">
+					</a>
+				</div>
+			</div>
+			<h5 class="offset-0 offset-sm-1 offset-md-4 offset-lg-2 offset-xl-1">
+			
+				<div class="itd_profile">
+					<a href="#" class="tn-lg d-flex justify-content-center">
+						<span id="cityIn" style="margin-right: 8px; margin-left: 20px;">aa</span>
+						<span id="arrow" style="display: none;">&#8594;</span> 
+						<span id="cityTo">aa</span>
+					</a>
+				</div>
+			</h5>
+		</div>
+</div>
+</div>
+</nav>
+</div>
+
+<!-- БАННЕР -->
+<div class="banner" style="padding-bottom: 80px;">
+	<div class="container">
+		<!-- ЛИНИЯ -->
+		<center style="margin-bottom: 30px; margin-top: -4px">
+			<hr class="divider my-1 text-center">
+		</center>
+
+		<div class="banner">
+			<div class="col-md-12">
+				<div class="imgM">
+					<img id="men" src="/image/Самолет.png" alt="l">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8" style="z-index: 2;">
+					<h2 id="info">Дешёвые авиабилеты из Нижневартовска от 1 478
+						рублей, Информация о перелётах</h2>
+				</div>
+				<div class="col-12">
+					<h6 class="Zapolnit">Заполните форму, чтобы найти билет:</h6>
+				</div>
+			</div>
+		</div>
+		<div class="blog"></div>
+	</div>
+	<center>
+		<div class="twidCenter">
+			<div class="twidget-container" id="twidget"></div>
+		</div>
+	</center>
+	<div id="root"></div>
+</div>
+
+<!-- ПРЕИМУЩЕСТВА САЙТА -->
+<div class="container-fluid d-flex h-100 justify-content-center ">
+	<div class="min-col">
+		<img src="/Iconly/free-icon-plane-ticket-3127176 1.svg" class="bilet" alt="">
+		<h6>САМЫЕ ДЕШЕВЫЕ БИЛЕТА</h6>
+	</div>
+	<div class="min-col">
+		<img src="/Iconly/free-icon-payment-method-1558085 1.svg" class="bilet" alt="">
+		<h6>ЛЕГКИЕ СПОСОБЫ ОПЛАТЫ</h6>
+	</div>
+	<div class="min-col last">
+		<img src="/Iconly/free-icon-job-search-2766922 1.svg" class="bilet" alt="">
+		<h6>БЫСТРЫЙ ПОИСК</h6>
+	</div>
+</div>
+<!-- БЛОК КОТОРЫЙ ПОЯВИТСЯ НА МОБ. УСТРОЙСТВАХ. ПО УМОЛЧАНИИ О СКРЫТ -->
+<center>
+	<div class="min-col lastNone">
+		<h6>БЫСТРЫЙ ПОИСК
+			<img src="/Iconly/free-icon-job-search-2766922 1.svg" class="bilet biletNone" alt="">
+		</h6>
+	</div>
+</center>
+</div>
+
+
+<div id="carusel" style="background-color: white; margin-top: 5%;">
+
+	<div id="GalHeader" class="offset-1 col-11">
+		<h4>Горячие направления <img src="/Iconly/free-icon-airplane-1358696 1.svg">
+		</h4>
+	</div>
+	<div class="container my-carousel">
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="row centered">
+
+						<div class="col-12 col-sm-6 col-lg-4 col-xl-4 ">
+							<div class="aa">
+								<a
+									href="https://www.aviasales.ru/search/AER0307MOW1?adults=3&children=0&depart_date=2023-04-12&destination_iata=SGC&expected_price_currency=rub&expected_price_source=calendar&expected_price_value=4490&infants=1&oneway=1&origin_iata=VKO&request_source=search_form&return_date=&trip_class=1&with_request=1">
+									<div class="blocksOne">
+										<h1>Сочи - Москва</h1>
+										<h2>Вылет 3 июля</h2>
+										<h6>от 6 000р</h6>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="two col-12 col-sm-6 col-lg-4 col-xl-4 ">
+							<a
+								href="https://www.aviasales.ru/search/PEE2606LED1?adults=3&children=0&depart_date=2023-04-12&destination_iata=SGC&expected_price_currency=rub&expected_price_source=calendar&expected_price_value=4490&infants=1&oneway=1&origin_iata=VKO&request_source=search_form&return_date=&trip_class=1&with_request=1">
+								<div class="blocksTwo">
+									<h1>Пермь - Санкт-Петербург</h1>
+									<h2>Вылет 26 июня</h2>
+									<h6>от 3 800р</h6>
+								</div>
+							</a>
+						</div>
+
+						<div class="third col-12 col-sm-6 col-lg-4 col-xl-4 ">
+							<a
+								href="https://www.aviasales.ru/search/MOW1707OMS1?adults=3&children=0&depart_date=2023-04-12&destination_iata=SGC&expected_price_currency=rub&expected_price_source=calendar&expected_price_value=4490&infants=1&oneway=1&origin_iata=VKO&request_source=search_form&return_date=&trip_class=1&with_request=1">
+
+								<div class="blocksThird">
+									<h1>Москва - Омск</h1>
+									<h2>Вылет 17 июля</h2>
+									<h6>от 5 500р</h6>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel-item">
+					<div class="row centered">
+						<div class="col-12 col-sm-6 col-lg-4 col-xl-4 ">
+							<a
+								href="https://www.aviasales.ru/search/KZN2407GRV1?adults=3&children=0&depart_date=2023-04-12&destination_iata=SGC&expected_price_currency=rub&expected_price_source=calendar&expected_price_value=4490&infants=1&oneway=1&origin_iata=VKO&request_source=search_form&return_date=&trip_class=1&with_request=1">
+
+								<div class="blocksSixth">
+									<h1>Казань - Грозный</h1>
+									<h2>Вылет 24 июля</h2>
+									<h6>от 10 000р</h6>
+								</div>
+							</a>
+						</div>
+
+						<div class="two col-12 col-sm-6 col-lg-4 col-xl-4 ">
+							<a
+								href="https://www.aviasales.ru/search/AER2407NJC1?adults=3&children=0&depart_date=2023-04-12&destination_iata=SGC&expected_price_currency=rub&expected_price_source=calendar&expected_price_value=4490&infants=1&oneway=1&origin_iata=VKO&request_source=search_form&return_date=&trip_class=1&with_request=1">
+
+								<div class="blocksFifth">
+									<h1>Сочи - Нижневартовск</h1>
+									<h2>Вылет 24 июля</h2>
+									<h6>от 11 500р</h6>
+								</div>
+							</a>
+						</div>
+						<div class="third col-12 col-sm-6 col-lg-4 col-xl-4 ">
+							<a
+								href="https://www.aviasales.ru/search/RTW0108AER1?adults=3&children=0&depart_date=2023-04-12&destination_iata=SGC&expected_price_currency=rub&expected_price_source=calendar&expected_price_value=4490&infants=1&oneway=1&origin_iata=VKO&request_source=search_form&return_date=&trip_class=1&with_request=1">
+
+								<div class="blocksFourth">
+									<h1>Саратов - Сочи</h1>
+									<h2>Вылет 1 августа</h2>
+									<h6>от 8 000р</h6>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				</button>
+
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+
+
+<div class="blog-slider">
+	<div class="aMargin">
+		<div class="a">
+			<div class="blog-slider__wrp swiper-wrapper ">
+				<div class="blog-slider__item swiper-slide">
+					<div class="blog-slider__img">
+						<img src="/images/Sochi.png" alt="">
+					</div>
+					<div class="blog-slider__content">
+						<h1>Сочи</h1>
+						<span class="blog-slider__code">Любимый зимний вид спорта Путина - лыжи. </span>
+						<div class="blog-slider__text">Его любимое место - Сочи. Еще до зимних Олимпийских игр 2014
+							года
+							он много раз ездил туда в 2000-е годы, пробуя новые склоны и встречаясь с
+							профессиональными
+							лыжниками и менеджерами курортов</div>
+						<a href="https://www.aviasales.ru/search/NJC2805AER1?expected_price_currency=rub&expected_price_source=calendar&expected_price_value=10278&params=NJC2805AER1&request_source=search_form"
+							class="blog-slider__button ">КУПИТЬ БИЛЕТ</a>
+						<a class="blog-slider__button OpenBlogs">А ГДЕ ЕЩЁ?</a>
+					</div>
+				</div>
+<br><br><br>
+				<!-- <div class="blog-slider__wrp swiper-wrapper "> -->
+				<!-- <div class="blog-slider__item swiper-slide"> -->
+					<!-- <div class="blog-slider__content"> -->
+						<h1><span id="cityIn"></span>  Сочи</h1>
+						<span class="blog-slider__text"> Цена</span>
+						<span class="blog-slider__text"> Цена</span>
+						<div class="blog-slider__text">Его любимое место - Сочи. Еще до зимних Олимпийских игр 2014
+							года
+							он много раз ездил туда в 2000-е годы, пробуя новые склоны и встречаясь с
+							профессиональными
+							лыжниками и менеджерами курортов</div>
+						<a href="https://www.aviasales.ru/search/NJC2805AER1?expected_price_currency=rub&expected_price_source=calendar&expected_price_value=10278&params=NJC2805AER1&request_source=search_form"
+							class="blog-slider__button ">КУПИТЬ БИЛЕТ</a>
+						<a class="blog-slider__button OpenBlogs">А ГДЕ ЕЩЁ?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="aMargin">
+		<div class="a aNone  ">
+			<div class="blog-slider__item swiper-slide">
+				<div class="blog-slider__img">
+					<img src="img/scale_1200.png" alt="">
+				</div>
+				<div class="blog-slider__content">
+					<h1>Республика Тыва</h1>
+					<span class="blog-slider__code">Любимое хобби Путина - рыбалка. </span>
+					<div class="blog-slider__text"> Во время подводной охоты на щуку к голове Путина была
+						пристегнута
+						камера GoPro, и кадры от первого лица транслировались по национальному телевидению. По
+						данным
+						Кремля, в тот день президент рыбачил несколько часов.</div>
+					<a href="https://www.aviasales.ru/search/NJC2805KYZ1?expected_price_currency=rub&expected_price_source=calendar&expected_price_value=10278&params=NJC2805AER1&request_source=search_form"
+						class="blog-slider__button">КУПИТЬ БИЛЕТ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="aMargin">
+		<div class="a aNone2">
+			<div class="blog-slider__item swiper-slide">
+				<div class="blog-slider__img">
+					<img src="/images/Ilmen.png" alt="">
+				</div>
+				<div class="blog-slider__content">
+					<div class="blog-slider__title">Озеро Ильмень, Остров Липно</div>
+					<span class="blog-slider__code">Любимое хобби Путина - рыбалка. </span>
+					<div class="blog-slider__text">Еще одна совместная поездка с Медведевым состоялась в сентябре
+						2016
+						года на озеро Ильмень в Новгородской области. Путин осмотрел остров, прокатился на лодке,
+						посетил старую церковь и поел ухи с местными рыбаками. </div>
+					<a href="https://www.aviasales.ru/search/NJC2805LED1?expected_price_currency=rub&expected_price_source=calendar&expected_price_value=10278&params=NJC2805AER1&request_source=search_form"
+						class="blog-slider__button">КУПИТЬ БИЛЕТ</a>
+					<a class="blog-slider__button CloseBlogs ">СВЕРНУТЬ</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="blog-slider__pagination"></div>
+</div>
+
+
+<div id="root"></div>
+
+</style>
+
+
+<!-- ФОРМА РАССЫЛКИ -->
+<form id="rassilka">
+	<div class="col-12">
+		<div class="container">
+			<div class="row">
+				<div class="col-11 col-md-12">
+					<div class="textFormRas">
+						<h4 class="text-center" id="podpishite">Подпишитесь на нашу рассылку</h4>
+						<center style="margin: 9px 0px -20px 0px;">
+							<span id="uznayte">Узнайте больше о наших акциях на билеты</span>
+						</center>
+					</div>
+				</div>
+				<div class="col-11 col-md-7 col-lg-7 col-xl-7">
+					<input id="email" type="text" class="form-control" placeholder="Эл. почта">
+				</div>
+
+				<div class="subscripBut col-11 col-md-4 col-lg-4 col-xl-4">
+					<button class="form-control subscripTEXT">Подписаться
+					</button>
+				</div>
+			</div>
+		</div>
+</form>
+</div>
+</div>
+
+
+<footer>
+	<div class="container">
+		<div class="row centered">
+			<div id="logoSoc" class="offset-4 offset-sm-0 col-6 col-sm-4 col-md-4 col-xl-3">
+				<a id="buv" class="navbar-brand col-md-4 col-sm-7 offset-xl-1 offset-sm-1 offset-md-1 offset-xxl-2"
+					href="#" style="color: #fff;">
+					<img src="/image/LOGO.svg" alt="">
+				</a>
+				<div class="SocNet400">
+					<div class="SocNet1 centered" style="font-size: 25px;margin-left: 50px;">
+						<img src="/image/Telegram App.svg" alt="">
+						<img src="/image/Twitter.svg" alt="">
+						<img src="/image/Tumblr.svg" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="NavFoot country col-5 offset-1 offset-sm-1 offset-md-0 col-sm-4 col-md-4 col-xl-3">
+				<h4 style="cursor:default;">Лучшие страны</h4>
+				<div class="FontWeight500">
+					<h4>Казахстан</h4>
+					<h4>Узбекистан</h4>
+					<h4>Беларусь</h4>
+					<h4>Грузия</h4>
+				</div>
+			</div>
+
+			<!-- БЛОК КОТОРЫЙ ПОЯВИТСЯ НА МОБ. УСТРОЙСТВАХ. ПО УМОЛЧАНИИ О СКРЫТ -->
+			<div class="NavFoot countryNone col-12 col-sm-4 col-md-4 col-xl-3">
+				<div class="SocNet">
+					<img src="/image/Telegram App.svg" alt="">
+					<img src="/image/Twitter.svg" alt="">
+					<img src="/image/Tumblr.svg" alt="">
+				</div>
+
+				<h4 style="cursor:default;">Лучшие страны</h4>
+				<div class="FontWeight500">
+					<h4>Казахстан</h4>
+					<h4>Узбекистан</h4>
+					<h4>Беларусь</h4>
+					<h4>Грузия</h4>
+				</div>
+			</div>
+
+
+			<!-- БЛОК КОТОРЫЙ ПОЯВИТСЯ НА МОБ. УСТРОЙСТВАХ. ПО УМОЛЧАНИИ О СКРЫТ -->
+			<div class="NavFoot countryNone col-12 col-sm-4 col-md-4 col-xl-3">
+				<h4 style="cursor:default;">Лучшие города</h4>
+				<div class="FontWeight500">
+					<h4>Москва</h4>
+					<h4>Адлер</h4>
+					<h4>Лондон</h4>
+					<h4>Бишкек</h4>
+				</div>
+			</div>
+
+			<div class="NavFoot city offset-1 offset-sm-0 col-5 col-sm-3 col-md-4 col-lg-4 col-xl-3">
+				<h4 style="cursor:default;">Лучшие города</h4>
+				<div class="FontWeight500">
+					<h4>Москва</h4>
+					<h4>Адлер</h4>
+					<h4>Лондон</h4>
+					<h4>Бишкек</h4>
+				</div>
+			</div>
+
+
+
+			<div class="col-3 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+				<div class="SocNet2">
+					<h4>Наши Социальные сети</h4>
+					<div class="centered" style="font-size: 35px;margin: -20px 50px 0px 0px; text-align: center;">
+						<img src="/image/Telegram App.svg" alt="">
+						<img src="/image/Twitter.svg" alt="">
+						<img src="/image/Tumblr.svg" alt="">
+					</div>
+				</div>
+			</div>
+			<center style="margin-bottom: -3%; margin-top: 20px;">
+				<hr style="color: #fff;" class="divider my-1 text-center" />
+			</center>
+			<center style="margin-bottom: 3%;">
+				<h5>&#169; 2020 АЛЕЙДАВИА</h5>
+			</center>
+		</div>
+	</div>
+	</div>
+</footer>
+
+
+    <!-- ФОРМА РЕГИСТРАЦИИ, ПОЯВИТСЯ ПОСЛЕ КЛИКА НА КНОПКУ "ВОЙТИ" -->
+    <div class="popup ">
+        <div class="popup__container">
+            <div class="popup__wrapper">
+                <div id="authentication">
+                    <!-- <form role="form" action="/" autocomplete="off" method="POST"> -->
+
+                    <br>
+                    <center>
+                        <h5 style="font-size: 23px;font-weight: 500; margin-top: -30px; margin-bottom: 0px;">
+                            Откуда</h5>
+                    </center>
+                    <!-- <br> -->
+                    <!-- <span id="delete"></span> -->
+                    <div class="Textform">
+                        <!-- <h5 style="font-size: 17px;font-weight: 300; margin-top: 0px; margin-bottom: 0px;">Добрый день,
+                        Ваш город Нижневартовск? 
+                        </h5> -->
+                        <h5
+                            style="text-transform: uppercase; text-align: center; font-size: 17px; margin-top: 15px; margin-bottom: 0px;">
+                            Ваш город <span id="city" style="text-decoration: underline;">
+                            </span>
+                        </h5>
+					</div>
+				</div>
+			</div>
+
+			<select class="js-selectize" name="city">
+						<option value="">Нижневартовск</option>
+					</select>
+            <button type="submit" class="regist begin">Продолжить</button>
+            <!-- <button type="submit" class="regist no ">Нет</button> -->
+</div>
+
+</div>
+
+  <div class="popup2 visible">
+        <div class="popup__container">
+            <div class="popup__wrapper">
+                <div id="authentication2">
+                    <!-- <form role="form" action="/" autocomplete="off" method="POST"> -->
+
+                    <br>
+                    <center>
+                        <h5 style="font-size: 23px;font-weight: 500; margin-top: -30px; margin-bottom: 0px;">
+                            КУДА</h5>
+                    </center>
+                    <!-- <br> -->
+                    <!-- <span id="delete"></span> -->
+                    <div class="Textform">
+                        <!-- <h5 style="font-size: 17px;font-weight: 300; margin-top: 0px; margin-bottom: 0px;">Добрый день,
+                        Ваш город Нижневартовск? 
+                        </h5> -->
+                        <h5
+                            style="text-transform: uppercase; text-align: center; font-size: 17px; margin-top: 15px; margin-bottom: 0px;">
+                            Ваш город <span id="city" style="text-decoration: underline;">
+                            </span>
+                        </h5>
+					</div>
+				</div>
+			</div>
+
+			<select class="js-selectize" name="city">
+						<option value="">Нижневартовск</option>
+					</select>
+            <button type="submit" class="regist end">Продолжить</button>
+            <!-- <button type="submit" class="regist no ">Нет</button> -->
+</div>
+
+
+<link rel="stylesheet" href="https://snipp.ru/cdn/selectize.js/0.12.6/dist/css/selectize.default.css">
+
+<!-- <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script> -->
+<script src="https://snipp.ru/cdn/microplugin.js/src/microplugin.js"></script>
+<script src="https://snipp.ru/cdn/sifter.js/sifter.min.js"></script>
+<script src="https://snipp.ru/cdn/selectize.js/0.12.6/dist/js/selectize.min.js"></script>
+<script>
+const massivCity = {};
+fetch('https://raw.githubusercontent.com/pensnarik/russian-cities/master/russian-cities.json')
+        .then(function (response) {
+                // Successful fetch return as json
+                return response.json();
+            })
+            .then(function (data) {
+				// Data now contains the json
+                for (let i = 0; i < data.length; i++) {
+					massivCity[i] = data[i].name;
+                    $('.js-selectize').append('<option value="'+ i+'">'+ massivCity[i] +'</option>');  
+                }
+				$(document).ready(function(){
+					$('.js-selectize').selectize();
+				});
+				$("input[type=select-one]").css({'width' : '250px'});
+				
+            })
+            .catch(function (error) {
+				console.log(error);
+            });
+            
+            
+			//         Получить текст выбранного элемента
+			// /* или */
+        // $('#select option:selected').html();
+
+
+        $('#twidget').twidget({
+			locale: 'ru',
+            marker: 78606,
+            type: 'avia'
+        });
+
+
+		const button = document.querySelector('.itd_profile');
+		const cityIn = document.querySelector('#cityIn');
+		const cityTo = document.querySelector('#cityTo');
+
+        const form = document.querySelector('#authentication');
+        const popup = document.querySelector('.popup');
+        // const form2 = document.querySelector('#authentication2');
+        const popup2 = document.querySelector('.popup2');
+
+		const continueB = document.querySelector('.begin');
+		const endB = document.querySelector('.end');
+		const arrow = document.querySelector('#arrow');
+
+        const knopkaOpen = document.querySelector('.OpenBlogs');
+        const blogPutin = document.querySelector('.aNone');
+        const blogPutin2 = document.querySelector('.aNone2');
+        const knopkaClose = document.querySelector('.CloseBlogs');
+
+        const Textform = document.querySelector('.Textform');
+        // const Textform2 = document.querySelector('.Textform2');
+        // const knopkaNO = document.querySelector('.no');
+        // const continueB = document.querySelector('.continue');
+
+        // cityIn.addEventListener('click', () => {
+        //     form.classList.remove('visible');
+        //     popup.classList.remove('visible');
+        // });
+        // cityTo.addEventListener('click', () => {
+        //     form2.classList.remove('visible');
+        //     popup2.classList.remove('visible');
+        // });
+
+        // form.classList.add('open');
+        // popup.classList.add('popup_open');
+
+        // delet.addEventListener('click', () => {
+        //     form.classList.add('visible');
+        //     popup.classList.add('visible');
+        // });
+
+        continueB.addEventListener('click', () => {
+			// form.classList.add('visible');
+            // popup.classList.add('visible');
+			// form2.classList.remove('visible');
+			popup2.classList.remove('visible');
+			var cityText = $(".selectize-input .item").text();
+			if (cityText ==''){
+				cityIn.text = "Нижневартовск";
+			}
+			// else{
+			// }
+			cityIn.text = 'lk';
+			arrow.css({'display':'block'})	
+
+			
+        });
+
+		endB.addEventListener('click', () => {
+		var cityText2 = $(".selectize-input .item").text();
+		
+		if (cityText2 ==''){
+			alert("Вам необходимо выбрать город")
+		}
+		else{
+			cityTo.text = cityText2;
+			popup2.classList.add('visible');	
+			popup.classList.add('visible');	
+				}
+
+	});
+
+        
+        knopkaOpen.addEventListener('click', () => {
+            blogPutin.classList.remove('visible');
+            blogPutin2.classList.remove('visible');
+            knopkaOpen.classList.add('visible');
+
+        });
+
+
+        knopkaClose.addEventListener('click', () => {
+            blogPutin.classList.add('visible');
+            blogPutin2.classList.add('visible');
+            knopkaOpen.classList.add('visible');
+
+        });
+    </script>
+
+</body>
+
+</html>
