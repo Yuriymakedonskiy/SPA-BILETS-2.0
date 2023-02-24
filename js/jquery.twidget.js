@@ -859,10 +859,16 @@
             
             const butTwidget = document.querySelector('.twidget-submit-button');
             const slider1 = document.querySelector('.slider1');
-            const dateDeparture = document.querySelector('.dateDeparture');
-            const dateArrival = document.querySelector('.dateArrival');
+            const dateDeparture = document.querySelectorAll('.dateDeparture');
+            const dateArrival = document.querySelectorAll('.dateArrival');
             const popup3 = document.querySelector('.popup3');
+            const colPassangers = document.querySelectorAll('.colPassangers');
+            const price = document.querySelectorAll('.price');
+            const colPas = document.querySelector('#colPas');
+
+            
     
+            
             butTwidget.addEventListener('click', () => {
                 var a = container.find('.twidget-pseudo-input').click(function(){
                     $(this).parent().find('input[type="text"]').select();
@@ -872,8 +878,52 @@
                 var infoTicket = abc.split('\n');
                 if (infoTicket.length==4){
                     console.log(infoTicket);
-                    dateDeparture.text = infoTicket[0];
-                    dateArrival.text = infoTicket[1];
+                    dateDeparture.forEach(function(userItem) {
+                        userItem.innerText = infoTicket[0];                        
+                        console.log(userItem.innerText)
+                    });
+                    dateArrival.forEach(function(userItem) {
+                        userItem.innerText = infoTicket[1];                        
+                        console.log(userItem.innerText)
+                    });
+                    colPassangers.forEach(function(userItem) {
+                        userItem.innerText = infoTicket[2];
+                        // var colpas = parseInt(userItem.innerText[0]);
+                    });
+                    var countPas = infoTicket[2];
+                    colPas.innerText= countPas[0];
+                    
+                    // console.log()
+                    price.forEach(function (price0) {
+                        if (countPas.split(' ')[2]=='эконом'){
+                            var sumTicket= parseInt(price0.value)*parseInt(countPas[0]);
+                            price0.innerText = String(sumTicket);
+        					// price0.value = String(price0.innerText)
+                            price0.innerHTML += '  &#8381;';
+
+                        }else if(countPas.split(' ')[2]=='бизнес-класс'){
+                            var sumTicket= (parseInt(price0.value)*parseInt(countPas[0]))*3;
+                            price0.innerText = String(sumTicket);
+        					// price0.value = String(price0.innerText)
+
+                            price0.innerHTML += '  &#8381;';
+
+                        }
+                    });  
+                    // function randomInteger(min, max) {
+                    //     // получить случайное число от (min-0.5) до (max+0.5)
+                    //     let rand = min - 0.5 + Math.random() * (max - min + 1);
+                    //     return Math.round(rand);
+                    // }
+                    // var colpas = parseInt(colPassangers[0].innerText);
+                    // console.log(colpas);
+                    // price.forEach(function (price1) {
+                    //     price1.innerText *=colpas;
+                    //     price1.innerHTML +='  &#8381;';
+                    // });
+                    
+                    // dateDeparture.text = infoTicket[0];
+                    // dateArrival.text = infoTicket[1];
                     slider1.classList.remove('visible');
                 }else{
                     popup3.classList.remove('visible');

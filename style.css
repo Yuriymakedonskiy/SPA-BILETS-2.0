@@ -1009,7 +1009,7 @@ td {
         margin-left: -1%; 
     }
 }
-@media only screen and (min-device-width: 985px) and (max-device-width:1200px) {
+@media only screen and (min-device-width: 985px) and (max-device-width:1259px) {
     .twidget-tab-content .twidget-tab{
         width:830px;
         padding-left: 0;
